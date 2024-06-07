@@ -7,8 +7,6 @@ Route::get('/', function () {
     return view('pages.auth.auth-login');
 })->middleware(['guest']);
 
-
-
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [DashboardController::class, 'index'])->name('home');
 });
